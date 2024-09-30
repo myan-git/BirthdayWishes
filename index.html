@@ -40,7 +40,7 @@
 
         #message {
             	display: none;
-            	font-size: 1.0em;
+            	font-size: 1em;
             	color: #2c3e50;
 		padding: 10px;
 		width: 100%;
@@ -88,7 +88,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Enter Password to View Your Birthday Wish!</h1>
+	<h1 id="password-header">Enter Password to View Your Birthday Wish!</h1>
         <input type="password" id="password" placeholder="Enter password">
 	<div class="hint" id="hint">Hint: Your name in my phone (lowercase) followed by the date we started dating (format DDMMYY)!</div> <!-- Added hint -->    
         <button onclick="checkPassword()">Submit</button>
@@ -138,11 +138,8 @@
     </div>
 
     <script>
-        // Define the correct password
-        const correctPassword = "spring140423";
-
-        // Function to check the entered password
-        function checkPassword() {
+	const correctPassword = "spring140423";
+	function checkPassword() {
             const inputPassword = document.getElementById('password').value;
             const message = document.getElementById('message');
             const error = document.getElementById('error');
