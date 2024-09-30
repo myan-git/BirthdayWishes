@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('balloon.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #message {
+            display: none;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Password to View Your Birthday Wish!</h1>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <div class="error" id="error"></div>
+        <p id="message">
+            	🎉 Happy Birthday, sayang! 🎉<br>
+		<br>
+		When you read this, you should know how excited I am since this is my first time doing this.<br>
+		I am excited for your birthday. I am excited to be able to pull this out. Hehe<br>
+		I hope this puts a bit of a smile on you!<br>
+		<br>
+		Above all, it’s not your birthday that I’m celebrating, it’s your love, your personality,<br>
+		and everything (good) entitled to you,<br>
+		including your (many) flaws. HAHA<br>
+		I’m honoured that you shared them with me.<br>
+		I’m blessed for your coming into my life and helping me to grow.<br> 
+		I learned a lot from your assistance in becoming a better me.<br>
+		<br>
+		Here’s my prayer for you:<br>
+		<br>
+		Dear Lord,<br>
+		<br>
+		On this special day, I lift up my boyfriend to You. I thank You for the gift of his life, his kind heart, <br>
+		and the love he so selflessly gives.<br> 
+		Lord, I ask that You continue to bless him abundantly, surrounding him with Your peace, love, 
+		and guidance in everything he does.<br>
+		May this new year of his life be filled with joy, success, and growth. <br>
+		Strengthen him in his moments of doubt, comfort him in his times of need,<br>
+		and remind him always of his incredible worth and purpose.<br>
+		<br>
+		Thank You for the love we share and the bond we have. Help me to support and encourage him in every way I can.<br> 
+		I pray that You watch over him, protect him, and guide him through all the challenges <br>
+		and blessings this year will bring.<br>
+		<br>
+		In Your precious name, I pray.<br>
+		Amen<br>
+		<br>
+		<br>
+		<br>
+		Happy birthday once again, sayang!🥳🎂<br>
+		<br>
+		<br>
+		Newcastle upon Tyne, 5th of October 2024<br>
+		Your princess,<br>
+		MYAN<br>
+        </p>
+    </div>
+
+    <script>
+        // Define the correct password
+        const correctPassword = "spring140423";
+
+        // Function to check the entered password
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const message = document.getElementById('message');
+            const error = document.getElementById('error');
+
+            if (inputPassword === correctPassword) {
+                message.style.display = 'block';  // Show birthday message
+                error.innerText = '';  // Clear any error messages
+            } else {
+                error.innerText = 'Incorrect password. Please try again.';  // Display error message
+                message.style.display = 'none';  // Hide birthday message
+            }
+        }
+    </script>
+</body>
+</html>
