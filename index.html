@@ -13,7 +13,7 @@
         	background-attachment: scroll;
         	display: flex;
         	justify-content: center;
-        	align-items: center;
+        	align-items: flex-start;
         	height: 100vh;
         	margin: 0;
 		padding: 20px;
@@ -21,7 +21,7 @@
 
         .container {
 		max-width: 600px;
-		width: 90%;
+		width: 100%;
             	text-align: left;
             	background-color: #fff;
             	padding: 20px;
@@ -30,7 +30,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		overflow: hidden;
+		overflow: auto;
         	}
 
         h1 {
@@ -39,20 +39,18 @@
        		}
 
         #message {
-            	display: none;
-            	font-size: 0.9em;
+            	font-size: 1rem;
             	color: #2c3e50;
 		padding: 10px;
+		word-wrap: break-word;
 		width: 100%;
 	        }
 
         input[type="password"] {
             	width: 100%;
 		padding: 10px;
-            	margin: 10px 0;
-            	border: 2px solid #ccc;
-            	border-radius: 5px;
-            	font-size: 16px;
+            	font-size: 1rem;
+		box-sizing: border-box;
 	        }
 
         button {          
@@ -80,7 +78,11 @@
 		margin-top: 10px;
 	}
 	@media (max-width: 600px) {
-            #message {
+		h1 {
+			font-size: 1.5em;
+		.container {
+			padding: 15px;
+		#message {
                 font-size: 1em;
 	    }
 	}
