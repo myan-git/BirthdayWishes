@@ -139,9 +139,15 @@
             const inputPassword = document.getElementById('password').value;
             const message = document.getElementById('message');
             const error = document.getElementById('error');
+            const passwordInput = document.getElementById('password');
+            const hint = document.getElementById('hint');
+            const submitButton = document.querySelector('button');
 
             if (inputPassword === correctPassword) {
                 message.style.display = 'block';  // Show birthday message
+                passwordInput.style.display = 'none'; // Hide password input
+                hint.style.display = 'none'; // Hide hint
+                submitButton.style.display = 'none'; // Hide submit button
                 error.innerText = '';  // Clear any error messages
             } else {
                 error.innerText = 'Incorrect password. Please try again.';  // Display error message
