@@ -144,14 +144,14 @@
             const submitButton = document.querySelector('button');
 
             if (inputPassword === correctPassword) {
-                message.style.display = 'block';  // Show birthday message
-                passwordInput.style.display = 'none'; // Hide password input
-                hint.style.display = 'none'; // Hide hint
-                submitButton.style.display = 'none'; // Hide submit button
-                error.innerText = '';  // Clear any error messages
+                message.style.display = 'block';
+                passwordInput.style.display = 'none';
+                hint.style.display = 'none';
+                submitButton.style.display = 'none';
+                error.innerText = '';
             } else {
-                error.innerText = 'Incorrect password. Please try again.';  // Display error message
-                message.style.display = 'none';  // Hide birthday message
+                error.innerText = 'Incorrect password. Please try again.';
+                message.style.display = 'none';
             }
         }
     </script>
