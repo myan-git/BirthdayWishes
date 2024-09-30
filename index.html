@@ -149,12 +149,13 @@
             const passwordInput = document.getElementById('password');
             const hint = document.getElementById('hint');
             const submitButton = document.querySelector('button');
-
+            const passwordHeader = document.getElementById('password-header');
             if (inputPassword === correctPassword) {
                 message.style.display = 'block';
                 passwordInput.style.display = 'none';
                 hint.style.display = 'none';
                 submitButton.style.display = 'none';
+                passwordHeader.style.display = 'none'; // Hide the header
                 error.innerText = '';
             } else {
                 error.innerText = 'Incorrect password. Please try again.';
